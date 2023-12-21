@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Manajemen Rumah Sakit</title>
+</head>
+<body>
+  <!-- navbar -->
+  <header>
+    <ul class="navbar">
+      <li><a href="/">Beranda</a></li>
+      <li><a href="/">Pasien</a></li>
+      <li><a href="/">Tagihan</a></li>
+    </ul>
+  </header>
+
+  <h2>Cari Data Pasien</h2>
+  <form id="searchForm">
+    <label for="searchTerm">Nama Pasien:</label>
+    <input type="text" id="searchTerm" name="searchTerm" required>
+    <button type="button" onclick="searchPatients()">Cari</button>
+  </form>
+
+  <h3>Hasil Pencarian</h3>
+  <ul id="searchResults"></ul>
+
+  <h2>Formulir Pendaftaran Pasien</h2>
+  <form action="/addPatient" method="post">
+    <label for="name">Nama Pasien:</label>
+    <input type="text" name="name" required>
+
+    <label for="age">Usia Pasien:</label>
+    <input type="number" name="age" required>
+
+    <label for="disease">Jenis Penyakit:</label>
+    <input type="text" name="disease" required>
+
+    <label for="admissionDate">Tanggal Penerimaan:</label>
+    <input type="text" name="admissionDate" required>
+
+    <label for="room">Nomor Ruangan:</label>
+    <input type="text" name="room" required>
+    <button type="submit">Daftarkan Pasien</button>
+  </form>
+
+  <!-- <h3>Daftar Pasien</h3>
+  <ul id="patientList"></ul> -->
+
+  <!-- Bagian untuk Tagihan -->
+  <h2>Tagihan</h2>
+  <form id="billForm">
+    <label for="patientName">Nama Pasien:</label>
+    <input type="text" id="patientName" name="patientName" required>
+    <label for="amount">Jumlah Tagihan:</label>
+    <input type="number" id="amount" name="amount" required>
+    <button type="button" onclick="createBill()">Buat Tagihan</button>
+  </form>
+  <h3>Daftar Tagihan</h3>
+  <ul id="billList"></ul>
+
+  <!-- Pisahkan file JavaScript -->
+  <script src="app.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
