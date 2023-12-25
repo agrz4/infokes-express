@@ -8,13 +8,44 @@
 </head>
 <body>
   <!-- navbar -->
-  <header>
-    <ul class="navbar">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/">Pasien</a></li>
-      <li><a href="/">Tagihan</a></li>
-    </ul>
-  </header>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">MyHospital</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
+        <li class="nav-item"><a href="#searchForm" class="nav-link">Pasien</a></li>
+        <li class="nav-item"><a href="#billForm" class="nav-link">Tagihan</a></li>
+        <li class="nav-item"><a href="#chatForm" class="nav-link">Tanya Dokter</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>  
+  
+  <div class="gambar">
+      <img src="/img/logohospital-removebg-preview.png" alt="">
+      <div class="paraghrap">
+        <div class="text">
+          <h2>Solusi Kesehatan Terlengkap</h2>
+          <p>Chat dokter, kunjungi rumah sakit, beli obat, cek lab dan update informasi seputar kesehatan, semua bisa di Halodoc!</p>
+        </div>
+        
+        <div class="box-card">
+          <div class="card1">
+            <p>Chat Dokter</p>
+          </div>
+          <div class="card2">
+            <p>Toko Kesehatan</p>
+          </div>
+          <div class="card3">
+            <p>Buat Janji RS</p>
+          </div>
+        </div>
+      </div>  
+  </div>
 
   <h2>Cari Data Pasien</h2>
   <form id="searchForm">
@@ -44,7 +75,6 @@
     <input type="text" name="room" required>
     <button type="submit">Daftarkan Pasien</button>
   </form>
-
   <!-- <h3>Daftar Pasien</h3>
   <ul id="patientList"></ul> -->
 
@@ -59,6 +89,21 @@
   </form>
   <h3>Daftar Tagihan</h3>
   <ul id="billList"></ul>
+
+  <!-- Formulir Chat Dokter -->
+  <h2>Tanya Dokter</h2>
+  <form id="chatForm">
+    <label for="patientName">Nama Pasien :</label>
+    <input type="text" id="patientName" name="patientName" required>
+
+    <label for="doctorName">Nomor Telepon :</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="message">Pesan :</label>
+    <textarea id="message" name="message" rows="4" placeholder="Masukkan Pesan Anda" required></textarea>
+
+    <button type="button" onclick="submitChat()">Kirim Pesan</button>
+  </form>
 
   <!-- Pisahkan file JavaScript -->
   <script src="app.js"></script>

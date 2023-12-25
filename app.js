@@ -6,21 +6,26 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 let patients = [
-  { name: 'John Doe', age: 35, disease: 'Fever', admissionDate: '2023-01-01', room: '101' },
-  { name: 'Jane Smith', age: 45, disease: 'Flu', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Agra', age: 35, disease: 'Pilek', admissionDate: '2023-01-01', room: '101' },
+  { name: 'Alfarizi', age: 45, disease: 'Flu', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Galuh', age: 45, disease: 'Batuk', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Riga', age: 45, disease: 'Demam', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Aiman', age: 45, disease: 'Flu', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Andika', age: 45, disease: 'Nyeri Otot', admissionDate: '2023-02-05', room: '101' },
+  { name: 'Nikolas', age: 35, disease: 'Diare', admissionDate: '2023-01-01', room: '101' },
+  { name: 'Nurma', age: 45, disease: 'Flu', admissionDate: '2023-02-05', room: '102' },
+  { name: 'Nana', age: 45, disease: 'Flu', admissionDate: '2023-02-05', room: '102' },
 ];
 
 let bills = [
-  { patientName: 'John Doe', amount: 100, status: 'belum dibayar' },
-  { patientName: 'Jane Smith', amount: 200, status: 'belum dibayar' },
+  { patientName: 'John Doe', amount: 100000, status: 'belum dibayar' },
+  { patientName: 'Jane Smith', amount: 200000, status: 'belum dibayar' },
 ];
 
 app.get('/', (req, res) => {
-  // res.sendFile(__dirname + '/public/views/index.html');
   res.sendFile(path.join(__dirname, 'public', 'views', 'index.html'));
 });
 

@@ -24,7 +24,7 @@ async function searchPatients() {
       });
     }
   }
-  
+
   async function createBill() {
     const patientName = document.getElementById('patientName').value;
     const amount = document.getElementById('amount').value;
@@ -67,7 +67,7 @@ async function searchPatients() {
     billListElement.innerHTML = '';
     billList.forEach(bill => {
       const listItem = document.createElement('li');
-      listItem.textContent = `${bill.patientName}: $${bill.amount} (${bill.status})`;
+      listItem.textContent = `${bill.patientName}: Rp.${bill.amount} (${bill.status})`;
   
       if (bill.status === 'belum dibayar') {
         const payButton = document.createElement('button');
@@ -81,4 +81,28 @@ async function searchPatients() {
   }
   
   document.addEventListener('DOMContentLoaded', getBills);
-  
+
+  // alert pesan
+  function submitChat() {
+    alert("Pesan terkirim, mohon tunggu chat kami!")
+    document.getElementById("chatForm").reset()
+  }
+  // hamburger
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", mobileMenu);
+
+  function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+  }
+  // navLink
+  const navLink = document.querySelectorAll(".nav-link");
+
+  navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
