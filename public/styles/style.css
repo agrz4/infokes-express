@@ -17,17 +17,17 @@ a{
   text-decoration: none;
 }
 
-.header {
-  background-color: #1E90FF;
-}
-
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #1E90FF;
 }
 
 .hamburger {
@@ -114,20 +114,19 @@ a{
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 300px;
-  background-color: #1E90FF;
+  height: auto;
   margin: auto;
-  margin-top: 20px;
   text-align: right;
 }
 .gambar img{
   position: relative;
-  width: 350px;
+  width: 250px;
   z-index: 1;
+  margin-bottom: 10px;
 }
 .gambar .paraghrap{
   position: absolute;
-  bottom: 80px;
+  top: 80px;
   width: 80%;
   height: 200px;
   margin-left: 10px;  
@@ -135,11 +134,41 @@ a{
 } 
 .gambar .paraghrap .text{
   width: 50%;
-  text-align: left;  
+  text-align: left;
 }
-.box-card{
+.paragrap {
+  color: #666;
+  margin-top: 10px;
+}
+
+.card {
   width: 50%;
-}
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+ }
+ 
+ ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+ }
+ 
+ li {
+  font-size: 14px;
+  position: relative;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+ }
+
+ .img-doctor,
+ .img-patient,
+ .img-bills {
+  height: 50px;
+ }
 
 form {
   margin: 20px auto;
@@ -186,4 +215,28 @@ button:hover {
 
 #message {
   width: 100%;
+}
+
+.h-pasien {
+  margin-top: 60px;
+}
+
+.card2 {
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.card3 {
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
 }

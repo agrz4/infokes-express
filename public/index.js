@@ -73,6 +73,7 @@ async function searchPatients() {
         const payButton = document.createElement('button');
         payButton.textContent = 'Bayar';
         payButton.addEventListener('click', () => payBill(bill.patientName));
+        payButton.style.width = 'auto';
         listItem.appendChild(payButton);
       }
   
